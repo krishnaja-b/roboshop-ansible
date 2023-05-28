@@ -13,7 +13,7 @@
     state: installed
 
 - name: load schema
-  ansible.builtin.shell: mongo --host mongodb-dev.aws43.xyz </app/schema/${component}.js
+  ansible.builtin.shell: mongo --host mongodb-dev.aws43.xyz </app/schema/${{component}}.js
 
 - name: mysql schema
   when: schema_type == "mysql"
