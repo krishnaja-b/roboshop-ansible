@@ -1,0 +1,7 @@
+- name: setup hostname
+  ansible.builtin.shell: set-hostname {{ component }}
+
+- name: install exporter
+  ansible.builtin.import_tasks:
+    name: prometheus
+    tasks_from: exporter
