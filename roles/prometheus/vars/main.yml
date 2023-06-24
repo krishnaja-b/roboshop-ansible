@@ -5,3 +5,5 @@ components:
    {  name: shipping, service_name: shipping }
    {  name: payment, service_name: payment }
    {  name: frontend, service_name: nginx }
+
+
