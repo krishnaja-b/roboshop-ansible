@@ -1,3 +1,4 @@
- - dependencies:
+#file: noinspection YAMLSchemaValidation
+dependencies:
     - role: common
 
