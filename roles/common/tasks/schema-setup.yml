@@ -27,3 +27,4 @@
   ansible.builtin.shell: mysql -h mysql-dev.aws43.xyz -uroot -pRoboShop@1 < /app/schema/{{component}}.sql
 
 
+
