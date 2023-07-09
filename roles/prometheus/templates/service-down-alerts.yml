@@ -1,0 +1,10 @@
+groups:
+  - name: roboshop-service-alerts
+    rules:
+      - alert: service down alerts - cart service
+        expr: node_systemd_unit_state{exported_name="cart.service", state="active"}
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: service down on some server - service name -cart.service
