@@ -8,3 +8,4 @@ groups:
           severity: critical
         annotations:
           summary: service down on some server - service name -cart.service
+
