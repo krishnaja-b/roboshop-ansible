@@ -3,9 +3,16 @@
     src: prometheus.yml
     dest: /opt/prometheus/prometheus.yml
 
+- name: update alerts configuration
+  ansible.builtin.template:
+    src: alerts.yml
+    dest: /opt/prometheous/alerts.yml
+
 - name: restart prometheus
   ansible.builtin.systemd:
+    name: prometheous
     status: restarted
+
 
 
 
