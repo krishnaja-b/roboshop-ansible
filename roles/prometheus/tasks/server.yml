@@ -7,11 +7,15 @@
   ansible.builtin.template:
     src: alerts.yml
     dest: /opt/prometheous/alerts.yml
+  loop:
+     - service-down-alerts.yml
+     - alerts.yml
 
 - name: restart prometheus
   ansible.builtin.systemd:
     name: prometheous
     status: restarted
+
 
 
 
