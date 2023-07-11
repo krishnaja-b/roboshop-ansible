@@ -14,6 +14,9 @@
     name: prometheous
     status: restarted
 
+- name: check prometheous is started
+  ansible.builtin.shell: netstat -lntp | grep 9090
+
 
 
 
