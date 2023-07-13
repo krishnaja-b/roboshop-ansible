@@ -17,6 +17,12 @@
 - name: check prometheous is started
   ansible.builtin.shell: netstat -lntp | grep 9090
 
+- name: update alert manager configuration
+  ansible.builtin.template:
+    src: alertmanager.yml
+    dest: /opt/alertmanager/alertmanager.yml
+
+
 
 
 
