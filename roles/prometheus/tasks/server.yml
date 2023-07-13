@@ -22,6 +22,14 @@
     src: alertmanager.yml
     dest: /opt/alertmanager/alertmanager.yml
 
+- name: restart alertmanager
+  ansible.builtin.systemd:
+    name: alertmanager
+    status: restarted
+
+- name: check alertmanager is started
+  ansible.builtin.shell: netstat -lntp | grep 9093
+
 
 
 
