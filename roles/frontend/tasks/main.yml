@@ -19,6 +19,11 @@
     dest: /usr/share/nginx/html
     remote_src: yes
 
+- name: create config in nginx
+  ansible.builtin.template:
+    sre: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
 - name: Create roboshop config in nginx
   ansible.builtin.template:
     src: roboshop.conf
