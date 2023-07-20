@@ -1,0 +1,10 @@
+- name: run logstash
+  when: elk
+  ansible.builtin.import_tasks:
+    file: logstash.yml
+
+
+- name: install file beat
+  when: file beat
+  ansible.builtin.import_tasks:
+    file: filebeat.yml
